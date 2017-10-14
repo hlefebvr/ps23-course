@@ -1,0 +1,87 @@
+\section{Introduction}
+
+La magnétostatique est l'étude du magnétisme dans les situations où le champ magnétique ne dépend pas du temps. Il existe deux sources de champs magnétiques : le courant électrique et la matière aimantée. L'analyse du champ magnétique commence avec l'experience de Orsted (1820, 40 ans après Coulomb) : il place un fil conducteur au dessus d'une boussole par hasard et y fait passer un courant. 
+
+\section{Champ magnétique}
+\subsection{Champ créé par une charge en mouvement}
+
+Le champ magnétique créé en un point $M$ par une particule $q$ située en $P$ et animée d'une vitesse $\vec{v}$ est 
+\[ \vec{B}(M)=\frac{\mu_0}{4\pi}\frac{q\vec{v}\land\vec{u}}{r^2} \]
+\emph{Remarque} : L'unité du champ magnétique est le Tesla. $\mu_0$ est la perméabilité du vide et vaut $\mu_0=4\pi\times 10^{-7}$ H.m$^{-1}$
+\subsection{Champ créé par un ensemble de charges}
+Le principe de superposition nous permet de déduire que, pour un ensemble de charge, le champ magnétique vaut :
+\[ \vec{B}(M)=\frac{\mu_0}{4\pi}\sum_{i=0}^n\frac{q_i\vec{v_i}\land\vec{u_i}}{r_i^1} \]
+Et pour une distribution de charge continu :
+\[ \vec{B}(M)=\frac{\mu_0}{4\pi}\int_\nu\frac{dq\vec{v}\land\vec{u}}{r^1} \]
+
+\subsection{Champ créé par un circuit électrique}
+
+Considérons un conducteur métallique, les porteurs de charge sont les électrons et on a 
+\[ dq\vec{v}=nq\vec{v}d\nu=\vec{j}d\nu\vec{v} \]
+Avec $n$ la densité de porteur de charge, $\vec{j}$ le vecteur densité et $\nu$ le volume ($d\nu=Sdl$). On a évidemment $\vec{dl}=\vec{v}dt$. \\\\
+\noindent On s'intéresse ici à une partie infinitésimalle d'un circuit. Calculons le champ magnétique élementaire :
+\[ d\vec{B}=\frac{\mu_0}{4\pi}\left[\iint_S\vec{j}.\vec{dS}\right]\vec{dl}\land\vec{u} \]
+Or, \[ \iint_S\vec{j}.\vec{dS}=I\vec{dl} \]
+\quadri{10}
+Avec $I$ le courant. On trouve la fameuse loi de Biot et Savart :
+\[ \vec{B}(M)=\frac{\mu_0}{4\pi}\int_C\frac{I\vec{dl}\land\vec{u}}{r^2} \]
+\emph{Remarque} : Le courant électrique est donnée par $I=nevS$ avec $n$ la densité de porteur de charge, $e$ la charge d'un électron, $v$ la vitesse moyenne de dérive et $S$ la section du fil considéré.
+
+\section{Théorème d'Ampère}
+\subsection{Théorème d'Ampère}
+
+Considérons tout d'abord un fil de longueur infinie, on a notamment :
+\[ \vec{OM}=r\vec{e_r}+z\vec{e_z} \textrm{ et donc } d\vec{OM}=\vec{dl}=dr\vec{e_r}+rd\theta\vec{e_\theta}+dz\vec{e_z} \]
+Le calcul de la circulation du champ magnétique selon une courbe fermée est alors assez remarquable :
+\[ C_\Gamma=\oint_\Gamma\vec{B}.\vec{dl}=\mu_0I\oint_\theta\frac{d\theta}{2\pi} \]
+Deux cas sont alors possibles, soit $\Gamma$ est une courbe qui n'enlace pas le fil, auquel cas $\oint_\theta\frac{d\theta}{2\pi}=0$. Soit $\Gamma$ enlace le fil et alors $\oint_\Gamma\vec{B}.\vec{dl}=\mu_0I$ (car alors $\oint_\theta\frac{d\theta}{2\pi}=1$). Ce résultat se généralise par le théorème d'Ampère.\\\\
+
+\noindent\textbf{Théorème d'Ampère} : La circulation de $\vec B$ le long d'une courbe orientée, fermée, appelée alors contour d'Ampère, est égale à $\mu_0$ fois la somme algébrique des courants qui traversent la surface $S_\Gamma$ délimité par $\Gamma$. Ou encore :
+\[ \oint_\Gamma\vec{B}.\vec{dl}=\mu_0I_{Total} \]
+\quadri{5}
+\emph{Remarque} : Le choix du sens de la circulation est arbitraire. 
+
+
+
+\subsection{Equation de Maxwell-Thomson}
+
+\noindent\emph{Rappel} : Pour une charge placée en $O$ animée d'une vitesse $\vec{v}=v\vec{e_z}$, on trouve que 
+\[ \vec{B}(M)=\frac{\mu_0 q\vec{v}\land\vec{e_\theta}}{(r^2+z^2)^{3/2}} \]
+\quadri{7}
+\noindent\textbf{Equation de Maxwell-Thomson} : On a toujours : \[ \textrm{div }\vec{B}=0 \]
+
+\subsection{Equation de Maxwell-Ampère}
+
+On vient d'établir que \[ \oint_\Gamma\vec{B}.\vec{dl}=\mu_0\iint_{S_\Gamma}\vec{j}.\vec{n}dS \]
+Or, la relation suivante est aussi verifiée (MT22) :
+\[ \iint_{S_\Gamma}\vec{\textrm{rot }}\vec{B}.\vec{dS}=\oint_\Gamma \vec{B}.\vec{dl} \]
+Ce qui nous permet de déduire
+\[ \vec{\textrm{rot }}\vec{B}=\mu_0\vec{j} \]
+\emph{Remarque importante} : Ceci est vrai uniquement si $\vec{j}$ est constant
+
+\section{Actions magnétiques}
+\subsection{Force magnétique subit par une particule chargée}
+
+\noindent\textbf{Force de Lorentz} : La force totale, électrique et magnétique, subie par une particule de charge $q$ et de vitese $\vec{v}$ (mesuré dans un réferentielle galiléen) est \[ \vec{F_L}=q(\vec{E}+\vec{v}\land\vec{B}) \]
+\emph{Remarque} : La composante magnétique ne fournit pas de travail.\\\\
+\noindent Etudions la trajectoire d'une particule chargée en présence d'un champ magnétique. On considère une particule de masse $m$ et de charge $q$. A $t=0$, $\vec{v}(t)=\vec{v_0}$. Le principe fondamental de la dynamique nous donne
+\[ m\frac{d\vec{v}}{dt}=q\vec{v}\land\vec{B} \]
+\emph{Rappel PS21} : \[\frac{d\vec{v}}{dt}=a_T\vec{T}+\frac{v^2}{R}\vec{N}\]
+Or, on a clairement $q\vec{v}\land\vec{B}\perp\vec{T}$, ce qui implique que
+\[ a_T=\frac{dv}{dt}=0 \textrm{ et donc }v=v_0=\textrm{cte} \]
+D'où finalement
+\[ m\frac{v_0^2}{R}=\mid qv_0B\mid \Rightarrow R=\mid\frac{mv_0}{qB}\mid=\textrm{cte} \]
+\quadri{5}
+
+\subsection{Force magnétique subit par un circuit}
+
+\noindent\textbf{Force de Laplace} : 
+\quadri{7}
+La force magnétique s'exerçant sur un élement de volume $d\nu=S\vec{dl}$ s'écrit 
+\[ d\vec{F}=dq\vec{v}\land\vec{B}=\left[\iint_\Sigma\vec{j}dS\right]\vec{dl}\land\vec{B}=I \vec{dl}\land\vec{B}\]
+Ainsi, la force totale subit par un fil, appelé force de Laplace est :
+\[ \vec{F}=I\int_{circuit}\vec{dl}\land\vec{B} \]
+\emph{Remarque} : A partir de la force de Lorentz, qui est une force microscopique agissant sur des particules individuelles, nous avons obtenu une force macroscopique agissant sur un solide. La force de Laplace est capable de déplacer le solide et donc d'exercer un travail non nul. Il faut interpréter cette force comme la résultante de l'action des particules sur le réseau cristallin. En fait, cela se traduit par la présence d'un champ électrostatique : la champ de Hall (cf. Wikipedia).\\\\
+\noindent\emph{Remarque 2} : C'est par la mesure de cette force qu'a été défini l'Ampère. L'Ampère est l'intensité du couant dans deux fils situés à $1$ m et produisant une attraction réciproque $F=2\times 10^{-7}$ N.
+
+

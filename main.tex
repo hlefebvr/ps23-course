@@ -1,0 +1,90 @@
+\documentclass[a4paper,3cm]{report}
+\usepackage{geometry}
+\geometry{margin=3cm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{float}
+
+\definecolor{lgray}{gray}{0.70}
+\newcommand\quadri[1]{\noindent
+\begin{figure}[H]
+\centering
+\medbreak
+\textcolor{lgray}{
+	\setlength\unitlength{5mm}
+	\begin{picture}(29,#1)\multiput(0,0)(1,0){30}{\line(0,1){#1}}\put(0,0){\line(1,0){29}}\multiput(0,1)(0,1){#1}{\line(1,0){29}}
+	\end{picture}}
+\smallbreak
+\end{figure}
+}
+
+
+\newcommand\quadribis[2]{%\begin{center}
+\begin{figure}[H]
+\setlength\unitlength{5mm}
+\begin{minipage}{#1\unitlength}\smallbreak\textcolor{gray}{\begin{picture}(#1,#2)
+\line(0,1){#2}
+\multiput(1,0)(1,0){#1}{\line(0,1){#2}}
+\put(0,0){\line(1,0){#1}}
+\multiput(0,1)(0,1){#2}{\line(1,0){#1}}
+\end{picture}}%\medbreak
+\end{minipage}
+\end{figure}
+%\end{center}
+}
+
+\title{PS23 : Ondes et électromagnétisme}
+\author{D'après un cours de\\
+P. Lanceleur et E. Perrey-Debain\\\\
+Retranscrit par\\
+H. Lefebvre}
+
+\date{2016}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%PREMIERE PARTIE (PS95)
+\part{Electromagnétisme}
+
+\chapter{Electrostatique}
+\input{chap/1_chap1_elec}
+
+\chapter{Conducteur en équilibre}
+\input{chap/1_chap2_energ}
+
+\chapter{Magnétostatique}
+\input{chap/1_chap3_magn}
+
+\chapter{Electrocinétique et induction}
+\input{chap/1_chap4_ind}
+
+%DEUXIEME PARTIE (PS96)
+\part{Ondes}
+
+\chapter{Equation des ondes et solutions}
+\input{chap/2_chap1_equ}
+
+\chapter{Ondes planes et harmoniques}
+\input{chap/2_chap2_plan}
+
+\chapter{Ondes 2D et 3D}
+\input{chap/2_chap3_2D}
+
+\chapter{Conditions aux limites}
+\input{chap/2_chap4_lim}
+
+\chapter{Ondes stationnaires et modes guidés}
+\input{chap/2_chap5_stat}
+
+\chapter{Interférences}
+\input{chap/2_chap6_inter}
+
+\end{document}

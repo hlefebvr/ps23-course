@@ -1,0 +1,40 @@
+\section{Définitions}
+\noindent\textbf{Perturbation} : Petite variation d'une quantité physique \\ \\
+\textbf{Onde} : Perturbation dynamique de toute quantité physique rendant compte de l'état d'un milieu, susceptible de se propager dans l'espace et le temps.\\ \\
+\textbf{Propagation} : Déplacement au cours du temps du phénomène dans un milieu qui "reste immobile" et revient à son état initial après le passage de l'onde. \\ \\
+\textbf{Equation d'onde} Si $\varphi$ est une onde, alors :
+\[\Delta\varphi(M,t)-\frac{1}{c_0^2}\frac{\partial^2\varphi}{\partial t^2}(M,t)=0, \forall M, t\]\\
+\emph{Remarque} : L'équation d'onde traduit bien la définition donnée ci-dessus : $\Delta\varphi$ représente la variation spatiale alors que $\frac{\partial^2\varphi}{\partial t^2}$ représente la variation temporelle du phénomène. Le terme $1/c_0^2$ rend homogène la formule. 
+\section{Description}
+\quadri{7}
+Ici, la perturbation qui a lieu en $t=t_0$ se propage dans le temps. C'est à dire que la "même perturbation" se retrouve à l'instant suivant $t=t_0+\Delta t$.\\ \\
+\textbf{Célérité} : En une durée $\Delta t = t-t_0$, l'onde se propage sur une distance $d=x-x_0$. On note alors $c=\frac{x-x_0}{t-t_0}$ la célerité de l'onde qui correspond au déplacement de la perturbation.\\ \\
+\emph{Remarque} : Ne pas confondre vitesse et celérité ! En effet, la vitesse est associée à un déplacement de masse alors que la celérité est liée à la propagation d'un phénomène. \\
+Ici par exemple, l'onde est transversale et $v=dy/dt$, avec $c>>v$ \\ \\
+\textbf{Propagation} : \[ c=\frac{x-x_0}{t-t_0} \Leftrightarrow c(t-t_0) = x-x_0 \Leftrightarrow x-ct=x_0-ct_0 \]
+Or $x_0-ct_0$ est constant ! On appelle alors "$x-ct$" le propagateur de l'onde. \\ \\
+\textbf{Progression} : On établit facilement le sens de la propagation en fonction du propagateur : 
+\begin{itemize}
+  \item $x-ct$ : l'onde se propage dans le sens des $x$ croissant (signes différents)
+  \item $x+ct$ : l'onde se propage dans le sens des $x$ décroissant (signes identiques)\\
+\end{itemize}
+
+\noindent\textbf{Solutions de l'équation} (Proposition) : $\varphi(M,t)=f(x-ct)+g(x+ct)$ est solution de l'équation des ondes. \\
+\emph{Preuve} : 
+\[
+\left \{
+  \begin{array}{l}
+  \Delta\varphi=\frac{\partial^2(f+g)}{\partial x^2}=f''+g'' \\
+  \frac{\partial(f+g)}{\partial t}=-c(f+g)
+  \end{array}
+\right.
+\Rightarrow 
+\left \{
+  \begin{array}{l}
+  \Delta\varphi=\frac{\partial^2(f+g)}{\partial x^2}=f''+g'' \\
+  \frac{\partial^2(f+g)}{\partial t^2}=c^2(f''+g'') \\
+  \end{array}
+\right.
+\Rightarrow \Delta\varphi-\frac{1}{c_0^2}\frac{\partial^2\varphi}{\partial t^2}=f''+g''-\frac{1}{c_0^2}(c^2(f''+g''))=0
+\]
+

@@ -1,0 +1,120 @@
+\section{Ondes stationnaires}
+\subsection{Mur infiniment rigide}
+\quadri{10}
+Pour modéliser la rencontre d'une onde avec un mur infiniment rigide, on conidère un milieu d'impédance accoustique $Z_1=\rho_0c_0$ et un autre milieu d'impédance infini (le mur) : $Z_2=+\infty$. On a alors
+\[
+\left\{
+\begin{array}{l}
+R_p=\frac{Z_2-Z_1}{Z_1+Z_2}\approx\frac{Z_2}{Z_2}=1 \\
+R_v\approx1
+\end{array}
+\right.
+\]
+On peut alors écrire le champ de pression totale 
+\[ p_1=p_i+p_r=p_{a_i}(e^{ikx}+e^{-ikx})e^{-i\omega t}=2p_{a_i}\cos (kx) e^{-i\omega t} \]
+Si nous revenons à l'onde véritable reélle, on trouve alors
+\[ p_1=2p_{a_i}\cos\omega t\cos kx \]
+De même, on peut établir l'onde de vitesse :
+\[ v_1=v_i+v_r=v_{a_i}(e^{ikx}-e^{-ikx})e^{-i\omega t}=2i\sin (kx) e^{-i\omega t}=2\sin (kx) e^{-i\omega t+\pi/2} \]
+En réelle on trouve alors 
+\[ v_1=2\sin (kx)\sin(-i\omega t) \]
+Les expressions ainsi obtenues ne sont pas progressives, en effet, on ne sait pas trouver de fonction $f$ telle que $p_1=f(x\pm c)$. Cette expression correspond à une onde dite stationnaire. L'onde ne se propage pas dans le temps ou dans l'espace, mais voit son amplitude varier. C'est le résultat de l'addition de deux ondes allant en sens opposé. Nous allons étudier ces variations d'amplitude. \\\\
+On peut remarquer que $p_1(x,t)$ est minimale quand $\mid\cos(kx)\mid$ est minimal également. Or
+\[ 
+\begin{array}{ll}
+\cos(kx)=0 &\Leftrightarrow \cos(kx)=\cos{\frac{\pi}{2}} \\
+& \Leftrightarrow xk=\frac{\pi}{2}+2n\pi \\
+& \Leftrightarrow x=\frac{\pi}{2k}+\frac{2n\pi}{k} \\
+& \Leftrightarrow x=\frac{\pi c}{2\omega}+\frac{2n\pi c}{\omega} \\
+& \Leftrightarrow x=\frac{\pi c}{4\pi f}+\frac{2n\pi c}{2\pi f} \\
+& \Leftrightarrow x=\frac{1}{4}\frac{c}{f}+n\frac{c}{f} \\
+& \Leftrightarrow x=\frac{\lambda}{4}+n\frac{\lambda}{2}
+\end{array}
+\]
+De même, on remarque que $p_1$ est maximal si $\mid\cos(kx)\mid$ est maximal, et avec le même genre de développement, on trouve :
+\[ \cos(kx)=1\Leftrightarrow x=\frac{\lambda}{2}+n\lambda \]
+\emph{Remarque} : Comme la pression et la vitesse sont en quadrature de phase, les ventres de pressions sont les noeuds de vitesses.
+\subsection{Tube avec ouverture}
+\quadri{10}
+Dans le cas d'un tube avec ouverture, on considère un tube présentant deux sections : la première $S_1$ et la seconde $S_2=+\infty$. On peut donc établir que
+\[ R_p=-1 \]
+Et de manière analogue à la partie précédente, la pression totale dans $S_1$ se trouve être
+\[ p_1=p_i+p_r=2P_{a_i}i\sin(kx)e^{-i\omega t}=2P_{a_i}\sin(kx)\sin(\omega t) \]
+\subsection{Tube unidimensionnel de longueur finie}
+\quadri{10}
+Dans le cas d'un tube unidimensionnel de longueur finie, on considère un tube de longueur $L$ fermé par deux murs infiniment rigides de telle façon à ce qu'on ait :
+\[
+\left\{
+\begin{array}{l}
+R_p(0)=\frac{p_+(0,t)}{p_-{0,t}}=1 \\
+R_p(L)=\frac{p_+(L,t)}{p_-{L,t}}=1
+\end{array}
+\right.
+\]
+Or, on connait la forme générale de $p_+$ et $p_-$, à savoir $p_\alpha=P_{a_\alpha}e^{i(kx\pm\omega t)}$, ceci nous permet d'établir que :
+\[ R_p(L)=\frac{P_{a_-}}{P_{a_+}}e^{-2ikL} \]
+On a donc 
+\[
+\left\{
+\begin{array}{l}
+P_{a_+}=P_{a_-} \\
+e^{2ikL}=1
+\end{array}
+\right.
+\]
+Or, en constatant que $1=e^{i2n\pi}$, il vient que
+\[ 2ikL=2in\pi\Rightarrow k=\frac{n\pi}{L} \]
+On appelle alors fréquence angulaire de raisonnance la quantité déduite suivante
+\[ \omega_n=\frac{n\pi c}{L} \]
+\section{Modes guidés}
+\subsection{Tube 2D}
+\quadri{10}
+Posons tout d'abord notre problème, ici, une onde se propage et est refléchi sur un mur rigide. Calculons le champ de pression totale :
+\[ p(x,z,t)=p_++p_-=P_{a_+}e^{i(\vec{k_+}.\vec{r}-\omega t)}+P_{a_-}e^{i(\vec{k_-}.\vec{r}-\omega t)} \]
+Or d'après notre étude du phénomène de réflexions, on sait que
+\[ 
+k_+=\left(\begin{array}{l}k_x\\0\\k_z\end{array}\right)
+\textrm{ et }
+k_-=\left(\begin{array}{l}-k_x\\0\\k_z\end{array}\right)
+\]
+On a encore :
+\[
+\left\{
+\begin{array}{l}
+R_p(0)=1 \\
+R_p(L)=1
+\end{array}
+\right.
+\Rightarrow
+\left\{
+\begin{array}{l}
+R_p(0)=\frac{P_{a_+}}{P_{a_-}} \\
+R_p(L)=\frac{P_{a_+}}{P_{a_-}}e^{i2k_xL}
+\end{array}
+\right.
+\]
+Comme dans la partie précédente, cela mène à l'égalité $e^{i2k_xL}=e^{i2n\pi}$, d'où
+\[ {k_x}_n=\frac{n\pi}{L} \]
+De plus, on sait que $\mid\mid\vec{k}\mid\mid=k^2$ et $k=\frac{\omega}{c}$, Ce qui nous permet de trouver
+\[ {k_z}_n=\sqrt{\left(\frac{\omega}{c}\right)^2-\left(\frac{n\pi}{L}\right)^2} \]
+\emph{Remarque} : Si $\omega/c>n\pi/L$, alors  $k_z\in\mathbb{R}$, l'onde est en mode progressif. Sinon, $k_z\in\mathbb{C}$, l'onde est en mode évanescent.
+
+\subsection{Cavité 2D}
+\quadri{10}
+Ici, l'onde est entourée de mur infiniment rigide, d'où les égalités suivantes
+\[ \forall z,x,t, R_p=\frac{p_+(0,z,t)}{p_-(0,z,t)}=\frac{p_+(L,z,t)}{p_-(L,z,t)}=\frac{p_+(x,0,t)}{p_-(x,0,t)}=\frac{p_+(x,H,t)}{p_-(x,H,t)}=1 \]
+Ce qui conduit aux relations
+\[
+\left\{
+\begin{array}{l}
+{k_x}_n=\frac{n\pi}{L} \\
+{k_z}_m=\frac{m\pi}{H}
+\end{array}
+\right.
+\]
+Et on trouve la fréquence de résonnance $\omega_{nm}$ :
+\[ \omega_{nm}=\pi c\sqrt{\left(\frac{n}{L}\right)^2+\left(\frac{n}{H}\right)^2} \]
+Les ondes de pressions correspondantes sont alors de la forme
+\[ p_{mn}=4P_{a_+}\cos(k_{x_n}x)\cos(k_{z_m}z)e^{-i\omega_{nm}t} \]
+\emph{Remarques} : Les résultats précédents peuvent se géneraliser en trois dimensions par un tube infini ou une cavité 3D.
+

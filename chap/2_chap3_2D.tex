@@ -1,0 +1,88 @@
+\section{Formalisme complexe}
+
+Durant notre étude des ondes 2D, 3D et même 1D, nous allons devoir travailler constamment avec les fonctions $\sin$ et $\cos$. Pour faciliter les calculs, on préférera travailler avec des fonctions complexes dont la partie réelle ou la partie imaginaire représente la véritable onde physique. Par exemple, si $\xi$ est une onde définie par
+\[ \xi(\vec{r},t)=\xi_0\cos(\vec{k}.\vec{r}-\omega t) \]
+On travaillera davantage avec la fonction complexe $\tilde{\xi}$ dont la partie réelle est $\xi$ :
+\[ \tilde{\xi} = \xi_0\cos(\vec{k}.\vec{r}-\omega t)+i\sin(\vec{k}.\vec{r}-\omega t) = \xi_0e^{i(\vec{k}.\vec{r}-\omega t)} \]
+L'addition de deux ondes devient donc plus simple à traiter qu'en réel. Il ne faut cela dit pas oublier que l'onde physique véritable est bien $\Re(\tilde{\xi})$.
+
+\section{Ondes 2D en cartésien}
+Une onde 2D en cartésien s'écrit :
+\[ \xi(\vec(r),t)=\xi_0e^{i(\vec{k}.\vec{r}-\omega t)} \]
+Et, pour un vecteur d'onde 
+\[\vec{k}=\begin{bmatrix}k_x \\ k_y \\ 0 \end{bmatrix}
+\textrm{ avec }
+\left \{
+\begin{array}{c}
+k_x=k\cos\theta \\
+k_y=k\sin\theta
+\end{array}
+\right.
+\]
+ on a : \[ k_x^2+k_y^2=\left( \frac{\omega}{c} \right)^2 \]
+\emph{Remarque} : On remarquera que $\vec{k}$ et $\vec{v}$ sont colinéaires, il sera intéressant, lorsque nous voudrons calculer la direction de $\vec{v}$ connaissant $\vec{k}$, de s'intéresser au rapport $\frac{k_y}{k_x}=\tan\theta$
+
+\section{Ondes 3D en sphérique}
+\subsection{Equation d'onde}
+\quadri{5}
+Dans cette partie, $\varphi(M,t)=f(r,\theta,\psi,t)$, or, par symétrie sphérique, on remarque que $\varphi$ est invariant selon $\theta$ et $\psi$, d'où :
+\[ \varphi(M,t)=f(r,t) \]
+Par ailleurs, l'équation d'onde en sphérique est :
+\[
+\begin{array}{ll}
+\Delta\varphi-\frac{1}{c^2}\frac{\partial^2\varphi}{\partial t^2}=0 &
+\Leftrightarrow \frac{1}{r}\frac{\partial}{\partial r}\left(r^2\frac{\partial\varphi}{\partial r}\right)-\frac{1}{c^2}\frac{\partial^2\varphi}{\partial t^2}=0 \\
+& \Leftrightarrow \frac{\partial^2}{\partial r^2}\left(r\varphi\right)-\frac{1}{c^2}\frac{\partial^2}{\partial t^2}\left(r\varphi\right)=0
+\end{array}
+\]
+Il semble que $r\varphi$ soit sujette à cette équation, or les solutions progressives de celle-ci sont de la forme $f(t-\frac{r}{c})+g(t+\frac{r}{c})$. D'où :
+\[
+r\varphi(r,t)=f(t-\frac{r}{c})+g(t-\frac{r}{c}) \Rightarrow \varphi(r,t)=\frac{f(t-\frac{r}{c})}{r}+\frac{g(t+\frac{r}{c})}{r}
+\]
+\emph{Remarque} : La partie en $x-r/c$ correspond à une onde divergente (s'éloignant de la source). La partie en $x+r/c$ correspond à une onde convergente (se dirigeant vers la source, possible par reflexion).\\\\
+\textbf{Equation génerale} : Alors qu'en 1D on avait $\varphi(x,t)=Ae^{i(kx-\omega t)}$, ici on a : 
+\[\varphi(r,t)=\frac{A}{r}e^{i(kr-\omega t)} \textrm{ et } \vec{k}=\vec{e_r} \]
+
+\subsection{Impédance accoustique en 3D}
+Notre étude des ondes accoustiques nous a donné, en une dimension, l'équation 
+\[ \frac{\partial p}{\partial x}=-\rho_0\frac{\partial^2\varphi}{\partial t^2} \]
+Cette équation se généralise en 3D par
+\[ (\vec{\textrm{grad }}p).\vec{e_r}=\frac{\partial p}{\partial r}=-\rho_0\frac{\partial^2\varphi}{\partial t^2} \]
+\emph{Remarque} : en 3D sphérique, seul $p$ et $\rho$ vérifient l'éqution d'onde (pas $v$ !)\\\\
+Cela dit, on sait que si $p\propto e^{-i\omega t}$ alors $v\propto e^{-i\omega t}$. On a donc 
+\[ \frac{\partial v}{\partial t}=-i\omega v(r,t) \Rightarrow \frac{\partial p}{\partial r}=-i\rho_0\omega v(r,t) \]
+Par ailleurs, on sait que $p=\frac{A}{r}e^{i(kr-\omega t)}$. D'où
+\[ 
+\begin{array}{ll}
+\frac{\partial p}{\partial r} & = -\frac{A}{r^2}e^{i(kr-\omega t)}+\frac{A}{r}ike^{i(kr-\omega t)} \\
+& = (ik-\frac{1}{r})\frac{A}{r}e^{i(kr-\omega t)} \\
+& = (ik-\frac{1}{r})p(r,t)
+\end{array}
+\]
+On peut alors exprimer le rapport $Z=\frac{p(r,t)}{v(r,t)}$ :
+\[ 
+-i\rho_0\omega v(r,t)=(ik-\frac{1}{r})p(r,t) \Rightarrow Z=\frac{-i\rho_0\omega}{ik-\frac{1}{r}}=\rho_0c_0\frac{1}{1+\frac{i}{kr}}
+\]
+\subsection{Intensité et puissance}
+\noindent\textbf{Intensité} :
+\[ I=\bar{pv}=\bar{\Re{(p)}\Re{(v)}}=\bar{\left(\frac{p+p^*}{2}\right)\left(\frac{v+v^*}{2}\right)}=\frac{1}{4}(\bar{p}v+p\bar{v})=\frac{1}{2}\Re(p\bar{v}) \]
+En utilisant les symétries sphériques, on trouve :
+\[ I=\frac{\mid p \mid^2}{2\rho_0c_0} \]
+\textbf{Puissance} : On définit la puissance accoustique comme 
+\[ P=\iint_\Sigma\vec{I}.\vec{n}dS \textrm{ où }\Sigma \textrm{ est une surface fermée} \]
+En utilisant les symétries sphériques, on trouve :
+\[ P=4\pi R^2I(R) \]
+
+\section{Effet Doppler}
+Lors du déplacement d'une source sonore, la fréquence reçue par un récepteur qui ne bouge pas est différente de celle émise et fonction de la vitesse de la source. En effet, supposons qu'à un instant $t=t_0$, une source $S$, dont la position est $x_S(t)=v_St$, émette un son de fréquence $f$ (et de période $T$). Un observateur est placé en $x=0$. Le temps $t_1$ auquel le récepteur $R$ reçoit la première crète est donc :
+\[ t_1 = t_0+\frac{v_St_0}{c_0} \]
+Une période temporelle $T$ plus tard, l'émetteur envoie une seconde crète. Celle-ci sera reçue à l'instant $t_2$ :
+\[ t_2 = t_0+T+\frac{v_S(t_0+T)}{c_0} \]
+Or, la période temporelle reçue par le récépteur est bien la différence entre les temps auxquels il perçoit les deux crètes. D'où :
+\[ T'=t_2-t_1 = (1-\frac{v_s}{c_0})T \]
+Ce phénomène est appelé effet Doppler. On introduit par ailleurs une nouvelle quantité $M$ appelée nombre de Mach telle que :
+\[ M=\frac{v_S}{c_0} \]
+\quadri{10}
+\section{Ondes 2D circulaires}
+
+\quadri{25}

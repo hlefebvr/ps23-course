@@ -1,0 +1,48 @@
+\section{Electrocinétique}
+\subsection{Loi d'Ohm}
+
+\emph{Rappel} : \quadri{5} Le courant traversant un tronçon de circuit de section $S$ est \[ I=\frac{dQ}{dt}=\iint_S\vec{j}.\vec{n}dS \]
+Dans la plupart des conducteurs, on observe une proportionalité entre la densité de courant ($\vec{j}$) et le champ électromoteur : $\vec{E}_m=\frac{\vec{F}}{q}$ (où $\vec{F}$ est la force responsable du mouvement des électrons)\\\\
+\noindent\textbf{Loi d'ohm} : \[ \vec{j}=\gamma\vec{E}_m \]
+Où $\gamma$ est appelé conductivité et $\eta=\gamma^{-1}$ est appelé la résistivité.\\\\
+\noindent On défnit alors la résistance d'un conducteur de section $S$ et de longueur $L$ par
+\[ R=\frac{\int_L\vec{E}_m.\vec{dl}}{I=\iint_S\vec{j}.\vec{n}dS}=\frac{\int_L\vec{E}_m.\vec{dl}}{\iint_S\gamma\vec{E}_m.\vec{n}dS} \]
+\emph{Remarque} : Si $E_m$ est constant, alors $R=\frac{\eta L}{S}$\\\\
+\noindent\emph{Remarque 2} : Si  le champ électromoteur est d'origine électrostatique pure, alors $\vec{E}_m=-\vec{\textrm{grad }}V$ et donc : 
+\[ R=\frac{\int_L\vec{E}_m.\vec{dl}}{I}=\frac{-\int_L\vec{\textrm{grad }}V.\vec{dl}}{I}=\frac{V_A-V_B}{I} \]
+
+\subsection{Conservation de la charge}
+Considérons une surface $S$ délimité par un volume $\nu$. Alors,
+\[ \frac{dQ}{dt}=\iiint_\nu\frac{\partial \rho}{\partial \rho}d\nu=-\iint_S\vec{j}.\vec{n}dS=\iint_\nu\textrm{div }\vec{j}d\nu \]
+D'où finalement : 
+\[ \frac{\partial\rho}{\partial t}+\textrm{div }\vec{j}=0 \]
+
+\section{Induction}
+\subsection{Expérience de Faraday}
+\quadri{13}
+\noindent\textbf{Loi de Faraday} : La variation temporelle du flux magnétique à travers un circuit fermé y engendre une force électromotrice induite notée $e$ ou $fem$ telle que
+\[ e=\oint_C\vec{E}_m.\vec{dl}=-\frac{d\Phi}{dt} \]
+Où $\Phi=\iint_S\vec{B}.\vec{n}dS$\\\\
+\noindent\textbf{Loi de Lenz} : L'induction produit des effets qui s'opposent aux causes qui lui ont donné naissance.\\
+Par exemple, Si $B$ augmente, le circuit $C$  va être telle qu'il va créer un champ $B_2$ qui va s'opposer à l'accroissement de $B$.
+\subsection{Equation de Maxwell-Faraday}
+Lorsqu'un courant variable circule dans un circuit, un champ magnétique est créé. Dans ce cas précis, la force induite doit être dû à la composante électrique de la force de Lorentz. On a :
+\[ e=\oint_C\vec{E}.\vec{dl}=-\frac{d}{dt}\left(\iint_S\vec{B}.\vec{n}dS\right) \]
+Or, on a (MT22) :
+\[ \oint_C\vec{E}.\vec{dl}=\iint_S\vec{\textrm{rot }}\vec{E}.\vec{n}dl \]
+D'où enfin, l'équation  de Maxwell-Faraday
+\[ \vec{\textrm{rot }}\vec{E}=-\frac{\partial\vec{B}}{\partial t} \]
+
+\subsection{Auto-induction et induction mutuelle}
+
+Un circuit isolé est parcouru par un courant $I$, ce courant engendre un champ magnétique, et donc un flux
+\[ \Phi=\iint_S\vec{B}.\vec{n}dS=\left[\frac{\mu_0}{4\pi}\iint_S\left(\oint_C\frac{\vec{dl}\land\vec{u}}{r^2}\right)\right].I=L.I \]
+En notant
+\[ L= \frac{\mu_0}{4\pi}\iint_S\left(\oint_C\frac{\vec{dl}\land\vec{u}}{r^2}\right) \]
+Enfin, d'après Faraday, la relation bien connue suivante est toujours vérifiée :
+\[ e=-L\frac{dI}{dt} \]
+
+\subsection{Retour sur les équations de Maxwell}
+
+\quadri{30}
+

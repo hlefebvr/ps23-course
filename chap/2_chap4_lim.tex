@@ -1,0 +1,200 @@
+\section{Interface entre deux milieux}
+\quadri{15}
+Lorsqu'une onde se propage sur une interface séparant deux milieux isotropes différents, deux phénomènes se produisent : la transmission et la reflexion. On note alors :
+\[
+\begin{array}{lcl}
+\textrm{Onde incidente} & : & p_i(x,t)=P_{a_i}e^{i(k_ix-\omega t)} \\
+\textrm{Onde reflechi} & : & p_r(x,t)=P_{a_r}e^{i(k_rx-\omega t)} \\
+\textrm{Onde transmise} & : & p_t(x,t)=P_{a_t}e^{i(k_tx-\omega t)} \\
+\end{array}
+\]
+Notre but dans cette partie est de réussir à trouver $k_r, k_t, P_{a_r}$ et $P_{a_t}$ en fonction $k_i$ et $P_{a_i}$.\\\\
+Tout d'abord, on peut remarquer que :
+\[ k_i=\frac{\omega}{c_1} \textrm{ et } k_r=\frac{\omega}{c_1} \]
+D'où les premières relations :
+\[
+\left \{
+\begin{array}{l}
+k_i=k_r=\frac{\omega}{c_1}=k_1 \\
+k_t=\frac{\omega}{c_2}=k_2
+\end{array}
+\right.
+\]
+Pour trouver les valeurs de $P_{a_r}$ et $P_{a_t}$, on introduit les rapports suivants
+\[
+\left \{
+\begin{array}{l}
+R_p=\frac{p_r(M,t)}{p_i(M,t)} \\
+T_p=\frac{p_t(M,t)}{p_i(M,t)}
+\end{array}
+\right.,
+\left \{
+\begin{array}{l}
+R_J=\frac{J_r(M,t)}{J_i(M,t)} \\
+T_J=\frac{J_t(M,t)}{J_i(M,t)}
+\end{array},
+\right.
+\textrm{ et }
+\left \{
+\begin{array}{l}
+R_v=\frac{v_r(M,t)}{v_i(M,t)} \\
+T_v=\frac{v_t(M,t)}{v_i(M,t)}
+\end{array}
+\right.
+\]
+Or, sur l'interface, on a évidemment une continuité de la pression et de la vitesse des particules. Ce qui se traduit mathématiquement par :
+\[
+\begin{array}{l}
+p_1(0,t)=p_2(0,t), \forall t \\ 
+v_1(0,t)=v_2(0,t), \forall t 
+\end{array}\]
+Avec : $\forall x,t$
+\[
+\begin{array}{l}
+p_1(x,t)=p_i(x,t)+p_r(x,t)=P_{a_i}e^{i(k_1x-\omega t)}+P_{a_r}e^{i(k_1x-\omega t)}\\
+p_2(x,t)=p_t(x,t)=P_{a_t}e^{i(kx-\omega t)}
+\end{array}
+\]
+En particulier, en $x=0$, on a :
+\[
+\left \{
+\begin{array}{l}
+p_1(0,t)=(P_{a_i}+P_{a_r})e^{-i\omega t} \\
+p_2(0,t)=P_{a_t}e^{-i\omega t} \\
+p_1(0,t)=p_2(0,t)
+\end{array}
+\right.
+\Rightarrow P_{a_i}+A_{a_r}=P_{a_t}
+\]
+On établit de manière analogue que :
+\[ v_{a_i}+v_{a_r}=v_{a_t} \]
+Or, par définition :
+\[
+Z_\alpha=\frac{p_\alpha}{v_\alpha} \Rightarrow 
+\left\{
+\begin{array}{l}
+v_{a_i}=\frac{P_{a_i}}{Z_1} \\
+v_{a_r}=-\frac{P_{a_r}}{Z_1} \\
+v_{a_t}=\frac{P_{a_t}}{Z_2}
+\end{array}
+\right.
+\]
+D'où le système suivant :
+\[
+\left\{
+\begin{array}{l}
+P_{a_i}+P_{a_r}=P_{a_t} \\
+\frac{P_{a_i}}{Z_1}-\frac{P_{a_r}}{Z_1}=\frac{P_{a_t}}{Z_2}
+\end{array}
+\right.
+\]
+Enfin, ceci nous permet de trouver les résultats fondamentaux suivant :
+\[
+\left\{
+\begin{array}{ll}
+R_p=\frac{Z_2-Z_1}{Z_1+Z_2} \\
+T_p=\frac{2Z_2}{Z_1+Z_2}
+\end{array}
+\right.
+\textrm{ et }
+\left\{
+\begin{array}{ll}
+R_v=\frac{Z_1-Z_2}{Z_1+Z_2} \\
+T_v=\frac{2Z_1}{Z_1+Z_2}
+\end{array}
+\right.
+\]
+
+\noindent\textbf{Remarque importante} : Les relations suivantes sont toujours vérifiés :
+\[ 1+R_p=T_p \textrm{ et } R_J+T_J=1 \]
+
+\section{Changement de section de tube}
+\quadri{15}
+De même que pour une interface entre deux milieux différents, lorsqu'une onde arrive à un changement de section de tube (comme décrit sur l'image), il y a reflexion et transmission d'ondes bien qu'il d'agisse du même milieu de part et d'autres. \\\\
+Ici, il y a continuité des pressions et des débits. (Le débit est définit comme : $Q_\alpha(x,t)=S_\alpha v_\alpha$). Et par un raisonnement analogue à ce qui vient d'être fait, on trouve : 
+\[
+\left\{
+\begin{array}{l}
+P_{a_i}+P_{a_r}=P_{a_t} \\
+Q_{a_t}+Q_{a_r}=Q_{a_t}
+\end{array}
+\right.
+\Leftrightarrow
+\left\{
+\begin{array}{l}
+P_{a_i}+P_{a_r}=P_{a_t} \\
+S_1(v_{a_i}+v_{a_r})=v_{a_t}
+\end{array}
+\right.
+\Leftrightarrow
+\left\{
+\begin{array}{l}
+P_{a_i}+P_{a_r}=P_{a_t} \\
+S_1(\frac{P_{a_i}}{Z_0}+\frac{v_{a_r}}{Z_0})=S_2\frac{v_{a_t}}{Z_0}
+\end{array}
+\right.
+\Leftrightarrow
+\left\{
+\begin{array}{l}
+P_{a_i}+P_{a_r}=P_{a_t} \\
+S_1(P_{a_i}-P_{a_r})=S_2P_{a_t}
+\end{array}
+\right.
+\]
+On trouve alors les formules suivantes :
+
+\[
+\left\{
+\begin{array}{ll}
+R_p=\frac{S_1-S_2}{S_1+S_2} \\
+T_p=\frac{2S_1}{S_1+S_2}
+\end{array}
+\right.
+\textrm{, }
+\left\{
+\begin{array}{ll}
+R_Q=\frac{S_2-S_1}{S_1+S_2} \\
+T_Q=\frac{2S_2}{S_2+S_1}
+\end{array}
+\right.
+\textrm{ et }
+\left\{
+\begin{array}{ll}
+R_J=R_p^2 \\
+T_J=\frac{4S_1S_2}{(S_1+S_2)^1}
+\end{array}
+\right.
+\]
+
+\section{Incidence oblique (2D)}
+\quadri{15}
+Cette partie est une généralisation de la partie précédente dans le cas 2D. De manière analogue, on a bien ici :
+\[
+\left\{
+\begin{array}{l}
+\mid\mid \vec{k_i} \mid\mid = \mid\mid \vec{k_r} \mid\mid = \mid\mid \vec{k_1} \mid\mid \\
+\mid\mid \vec{k_t} \mid\mid = \mid\mid \vec{k_2} \mid\mid
+\end{array}
+\right.
+\]
+Au niveau l'interface, il y a évidemment continuité des pressions et des phases. En effet, on ne saurait avoir au même endroit, un minimum de pression et un maximum.\\\\
+\textbf{Continuité de la phase} : Mathématiquement, la continuité des phases à l'interface se traduit par
+\[k_{i_x}=k_{t_x}=k_{r_x}=k_x\]
+Ceci a pour conséquence les lois de Snell-Descartes, en effet :
+\[ k_{i_x}=k_{r_x}\Leftrightarrow k_1\sin\theta_i=k_1\sin\theta_r\Leftrightarrow \sin\theta_i=\sin\theta_r \textrm{ (1iere loi de Snell)} \]
+\[k_{i_x}=k_{t_x} \Leftrightarrow k_1\sin\theta_i=k_2\sin\theta_t\Leftrightarrow\sin\theta_t=\frac{c_2}{c_1}\sin\theta_i \textrm{ (2ieme loi de Snell)} \]
+
+On peut distinguer alors deux cas. Soit $c_1>c_2$, auquel cas $\theta_t<\theta_i$. Soit $c_1<c_2$, et $\theta_t=\sin^{-1}(\frac{c_2}{c_1}\sin\theta_i)$, or, $\theta_t$ est ainsi calculable uniquement si 
+\[ \frac{c_2}{c_1}\sin\theta_i\le 1 \Leftrightarrow \sin\theta_i \le \frac{c_1}{c_2} \]
+On note alors $\theta_c$ l'angle critique telle que
+\[ \theta_c=\sin^{-1}(\frac{c_1}{c_2}) \]
+Si $\theta_i>\theta_c$ alors aucune onde n'est transmise durablement vers le milieu (2). Seul une onde evanescente est transmise.\\
+
+\noindent\textbf{Continuité des pressions} : La continuité des pressions au niveau de l'interface nous donne, comme pour le cas 1D :
+\[ p_1(x,0,t)=p_2(x,0,t) \Rightarrow P_{a_i}e^{ik_1x}+P_{a_r}e^{ik_1x}=P_{a_t}e^{ik_2x} \Rightarrow P_{a_i}+P_{a_r}=P_{a_t} \]
+Toutes ces considérations nous mènent aux formules portant sur les rapport $R_p, T_p,$ etc. Il suffit pour les trouver d'utiliser les formules du cas en deux dimensions, en substituant $Z_1\rightarrow\frac{Z_1}{\cos\theta_i}$ et $Z_2\rightarrow\frac{Z_2}{\cos\theta_t}$
+
+\noindent\textbf{Remarque importante} : Là encore, on a 
+\[ 
+R_p+1=T_p \textrm{ et } R_J+T_J=1
+ \]

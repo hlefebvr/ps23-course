@@ -1,0 +1,162 @@
+%TEST : \quadribis{4}{5}
+L'électrostatique est le domaine de la physique qui étudie les phénomènes créés par des charges électriques statiques. Depuis l'antiquité, il est connu que certains materiaux (dont l'ambre) attirent des objets de petites tailles après avoir été frottés. Le mot grec pour "ambre" est elek-tron.
+
+\section{Structure de la matière}
+
+La vision moderne de la matière décrit celle-ci comme étant constituée d'atomes. Ceux-ci sont eux-même composés d'un noyau (1981, Rutherford) autour duquel "gravite" une sorte de nuage composé d'électrons et portant l'essentiel de la masse. Ces electrons se repoussent les uns les autres mais restent confinés autour du noyau car celui-ci possède une charge positive qui les attire. On attribue cette charge positive à des particules appelés protons. Il existe un autre type de particule, les neutrons, portant une charge électrique nulle. \\\\
+Dans le tableau de Mandeliev, tout élement $X$ est representé par la notation \[ X^A_Z \] où $A$ est le nombre de masse (nombre total de nucléon) et $Z$ le numéro atomique (nombre de protons). La charge électrique nucléaire totale est donc
+\[ Q=+Ze \]
+Et le cortège électrique possède une charge \[Q=-Ze\]
+Ce qui assure la neutralité de l'atome. \\\\
+\noindent \textbf{Numérique} : Voici quelques données numériques :
+\[
+\begin{array}{ll}
+\textrm{Electron} & 
+\left\{
+\begin{array}{l}
+Q_e=-e=-1.602\times 10^{-19} \textrm{ C} \\
+m_e=9.109\times 10^{-31}\textrm{ kg}
+\end{array}
+\right. \\
+\textrm{Proton} & 
+\left\{
+\begin{array}{l}
+Q_p=+e=1.602\times 10^{-19} \textrm{ C} \\
+m_p=1.672\times 10^{-27} \textrm{ kg}
+\end{array}
+\right.
+\\
+\textrm{Neutron} & 
+\left\{
+\begin{array}{l}
+Q_n=0 \\
+m_n=1.674 \times 10^{-27} \textrm{ kg}
+\end{array}
+\right.
+\\
+\end{array}
+\]
+A l'heure actuelle, l'univers est descriptible à l'aide des 4 forces fondamentales :
+\begin{itemize}
+\item Force nucléaire faible (radioactivité)
+\item Force nucléaire forte (cohésion du noyau)
+\item Force électromagnétique (cohésion de l'atome)
+\item Force gravitationnelle (cohésion des corps astro-physiques)
+\end{itemize}
+Un matériau est ainsi constitué d'un grand nombre de charges électriques, mais celles-ci sont toutes compensées. Des charges en excés ou en manque, non compensées, sont responsables des effets électriques. \\\\
+\noindent\textbf{Conducteur parfait} : Un matériau est dit conducteur parfait si lorsqu'il devient electrisé, les porteurs de charges non compensées peuvent se déplacer librement dans tout le volume occupé par le materiau. (exemple : électrolyse, conducteur ohmique)\\\\
+\noindent\textbf{Isolant parfait} : Un matériau est dit isolant (ou diélectrique) parfait si les porteurs de charges restent "immobiles".
+
+\section{Forces, champs et potentielles}
+\subsection{Force de Coulomb}
+
+\par Charles Auguste Coulomb (1736-1806) a effectué une série de mesures qui lui ont permis de déterminer avec un certain degré de précision les propriétés de la force électrostatiques. La force est radiale et proportionnelle au produit des charges et varie comme l'inverse du carré de la distance entre les charges.
+\quadri{5}
+\noindent\textbf{Définition} : La force exercée par une charge ponctuelle $q_1$ sur une autre charge $q_2$ est :
+\[ \vec{F}_{1/2}=\frac{1}{4\pi\varepsilon_0}\frac{q_1q_2}{r_{1,2}^2}\vec{u}_{1,2} \]
+Où $k=\frac{1}{4\pi\varepsilon_0}=9\times 10^9 \textrm{ Nm}^2\textrm{C}^{-2}$, $\varepsilon$ la permitivité du vide (en Farad par mètre) et où $\vec{u}_{1,2}$ est vecteur unitaire allant de $1$ vers $2$. (Attention, dans un milieu différent du vide, la constante de permitivité doit être adapté)
+\\\\
+\noindent\emph{Remarque} : Pour un électron, la force de gravité est hautement négligeable par rapport à la force électromagnétique, en effet \[ \frac{F_e}{F_g}=\frac{e^2}{4\pi\varepsilon_0 r^2}\left(\frac{Gm_e^2}{r^2}\right)^{-1}=4\times 10^{42} \]
+
+\subsection{Champ électrostatique}
+
+Pour une charge ponctuelle, on peut remarquer que $\frac{\vec{F}_{1/2}}{q_2}$ ne dépend que de la charge $q_1$ et de la distance $r_{1,2}$. On appelle cette quantité vectorielle "champ électrique"\\\\
+\noindent\textbf{Champ électrostatique} : Une charge $q$ en un point $P$ de l'espace, crée en un point $M$ de l'espace un champ électrostatique $\vec{E}(M)$ en V/m telle que :
+\[ \vec{E}(M)=\frac{1}{4\pi \varepsilon_0}\frac{q}{r^2}\vec{u} \]
+\noindent\textbf{Champ créé par un ensemble de charge} : D'après le principe de superposition, le champ résultant en un point $M$ est égale à la somme de tous les champs électriques de chacunes des charges $q_i$ ($i=1...n$) placés en $P_i$. De sorte qu'en notant $\vec{r}_i=\vec{P_iM}$ et $\vec{u}_i=\vec{r}_i/\mid\mid\vec{r}_i\mid\mid$
+\[ \vec{E}(M)=\frac{1}{4\pi \varepsilon_0}\sum_{i=1}^n\frac{q_i}{r_i^2}\vec{u}_i \]
+En pratique, cette expression n'est que rarement utilisée puisque nous sommes amenés à considérer un nombre gigantesque de particules. Il est donc plus habile d'utiliser des distributions continues de charge. Il s'agit d'une approximation, permettant de remplacer une somme discrète presqu'infinie par une somme continu :
+\[ \vec{E}(M)=\int_{dist}\frac{dq(P)}{4\pi\varepsilon_0 r^2}\vec{u} \]
+Avec $dq(P)$ la charge en $P$ et $\vec{r}=\vec{PM}$
+\\\\\noindent\textbf{Densités} : Pour caractériser la distribution de charges sur un volume, on introduit les densités de charges suivantes \\
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Densité linéique & Densité surfacique & Densité volumique  \\
+\hline
+$\lambda=\frac{dq}{dl}$ & $\sigma=\frac{dq}{dS}$ & $\rho=\frac{dq}{dV}$ \\
+\hline
+$\vec{E}(M)=\frac{1}{4\pi\varepsilon_0}\int_C\frac{\lambda}{r^2}\vec{u}dl$ & 
+$\vec{E}(M)=\frac{1}{4\pi\varepsilon_0}\iint_\Sigma\frac{\lambda}{r^2}\vec{u}dl$ &
+$\vec{E}(M)=\frac{1}{4\pi\varepsilon_0}\iiint_V\frac{\lambda}{r^2}\vec{u}dl$ \\
+\hline
+\end{tabular}
+\end{center}
+\quadri{6}
+
+\subsection{Application}
+Ces phénomènes électrostatiques sont utilisés par exemple pour dévier une particule de charge $q$. En effet, d'après le principe fondamentale de la dynamique : 
+\[ \vec{F}=m\frac{d\vec{v}}{dt}=q\vec{E}\Rightarrow
+\left\{
+\begin{array}{l}
+x=v_0t\\
+y=\frac{1}{2} \frac{qE}{m}t^2
+\end{array}
+\right. \Rightarrow y=\frac{qE}{2mv_0^2}x^2 \]
+\quadri{10}
+
+\section{Théorème de Gauss}
+\subsection{Notion d'angle solide}
+La notion d'angle solide est l'extension naturelle dans l'espace de l'angle défini sur un plan. \\\\
+\noindent\textbf{Définition} : L'angle solide élementaire $d\Omega$, délimité par un cône coupant un élement de surface $dS'$ à distance $r$ de son sommet $O$ vaut :
+\[ d\Omega=\frac{dS'}{r^2} \]
+\quadri{7}
+D'une façon génerale, le cône peut intercepter une surface quelconque $dS$ dont la normale $\vec{n}$ fait un angle $\theta$ avec le vecteur unitaire $\vec{u}$. On a alors bien sûr $\vec{n}.\vec{u}=\cos\theta$ et on peut considérer que $dS'=dS\cos\theta$, d'où
+\[ d\Omega=\frac{dS'}{r^2}=\frac{dS\cos\theta}{r^2}=\frac{dS\vec{n}.\vec{u}}{r^2} \]
+
+\subsection{Flux d'un champ électrostatique}
+
+On considère une charge ponctuelle $q$ en $O$. Le flux du champ $\vec{E}$ dû à $q$ à travers une surface élementaire $\vec{dS}=dS\vec{n}$ est
+\[ d\Phi=\vec{E}.\vec{dS}=\vec{E}.\vec{n}dS=\frac{1}{4\pi\varepsilon_0}\frac{q}{r^2}\vec{u}.\vec{n}dS=\frac{q}{4\pi\varepsilon_0}d\Omega \]
+
+\subsection{Théorème de Gauss}
+
+Que se passe-t-il si on s'intéresse au flux total à travers une surface fermée ?
+\quadri{11}
+\noindent\textbf{Bilan du flux sur le cône $d\Omega$} : Comme la surface considérée est fermée, le nombre de traversées du cône est toujours impair (cf. ci-dessus). Ainsi, pour une traversée : \[ d\Phi=\frac{qd\Omega}{4\pi\varepsilon_0} \]
+Pour trois traversées : \[ d\Phi=d\Phi_1+d\Phi_2+d\Phi_3=\frac{q}{4\pi\varepsilon_0}(d\Omega-d\Omega+d\Omega)=\frac{qd\Omega}{4\pi\varepsilon_0} \]
+Ceci se vérifie encore pour un nombre supérieur de traversées du cône. Et, en intégrant selon toutes les distances, on trouve :
+\[ \Phi=\iint_\Sigma d\Phi=\iint_\Sigma\frac{qd\Omega}{4\pi\varepsilon_0}=\frac{q}{\varepsilon_0} \]
+Ce résultat se généralise encore pour un nombre quelconque de charges, c'est le théorème de Gauss.\\\\
+\noindent\textbf{Théorème de Gauss} : \[ \Phi=\iint_\Sigma\vec{E}.\vec{n} dS=\frac{Q_{int}}{\varepsilon_0}\]
+
+\subsection{Equation de Maxwell-Gauss}
+
+Le théorème de Gauss-Ostrogradski (MT22) nous permet d'affirmer que 
+\[ \iint_\Sigma\vec{E}.\vec{n}dS=\iiint_V\textrm{div }\vec{E}dV \]
+Or, dans le cas d'une distribution volumique de charge, on a
+\[ \iint_\Sigma\vec{E}.\vec{n}dS=\iiint_V\frac{\rho}{\varepsilon_0}dV \]
+Ce qui nous permet de déduire la première des équations de Maxwell :
+\[ \textrm{div }\vec{E}=\frac{\rho}{\varepsilon_0} \]
+
+
+\section{Energies et travail}
+\subsection{Cas d'une charge ponctuelle}
+Prenons une particule "test" de charge $q_t$ placée dans un champ électrostatique $\vec{E}$ créé par une autre charge $q$ placée au point $P$. Pour déplacer la charge $q_t$ du point $A$ au point $B$, un opérateur doit fournir une force qui s'oppose à la force de Coulomb. Si ce déplacement est fait suffisamment lentement, $\vec{F}=-q_t\vec{E}$ et le travail fourni par l'opérateur est donné par \[ W_A^B=\int_A^B\vec{F}.\vec{dl}=-q_t\int_A^B\vec{E}.\vec{dl}=\int_A^B\frac{q}{4\pi\varepsilon_0}\frac{\vec{u}.\vec{dl}}{r^2}=-q_t\int_A^B\frac{q}{4\pi\varepsilon_0 r^2}\cos\theta dl=-q_t\int_A^B\frac{qdr}{4\pi\varepsilon_0 r^2} \]
+Par ailleurs, si on note $V(M)$ le potentiel électrostatique tel que \[ V(M)=\frac{q}{4\pi\varepsilon_0 r} \]
+On trouve que \[ W_A^B = q_t(V(B)-V(A)) \]
+\quadri{10}
+\emph{Remarque} : La force électrostatique est conservative\\\\
+\noindent\textbf{Energie potentielle} : L'energie potentielle d'une particule chargée $q_t$ placée dans un champ électrostatique est égale au travail qu'il faut fournir pour amener de façon quasi-statique cette particule de l'infini à sa position actuelle.
+\[ U=W_\infty^M=q_t(V(M)-V(\infty))=q_tV(M) \textrm{ Car, par convention : }V(\infty)=0 \]\\
+\noindent\textbf{Relation entre $\vec{E}(M)$ et $U(M)$} : Considérons deux points très proche $M$ et $M'$. On a $\vec{MM'}=\vec{dl}$. On a alors d'une part
+\[ dV=V(M')-V(M)=-\int_M^{M'}\vec{E}.\vec{dl}=-\vec{E}.\vec{dl} \]
+Et d'autre part
+\[ V=V(x,y,z)=\frac{\partial U}{\partial x}dx+\frac{\partial U}{\partial y}dy+\frac{\partial U}{\partial z}dz=\vec{\textrm{grad }}V.\vec{dl} \]
+D'où  l'égalité suivante :
+\[ \vec{E}=-\vec{\textrm{grad }}V \]
+
+\subsection{Cas d'une distribution de charge}
+
+Fixons une particule de charge $q_1$. Le travail nécessaire pour amener une charge $q_2$ est \[ U_2=q_2V_{12}=\frac{1}{4\pi\varepsilon_0}\frac{q_1q_2}{r_{12}} \]
+De même, le travail pour amener une troisième charge $q_3$ est \[ U_3=q_3(V_{13}+V_{23})=\frac{q_1q_3}{r_{13}}+\frac{q_2q_3}{r_{23}} \]
+Enfin, pour $n$ charges $q_i$, on trouve
+\[ U=U_1+U_2+...+U_n=\frac{1}{4\pi\varepsilon_0}\sum_{i=1}^nq_i\sum_{j<i}\frac{q_j}{r_{ij}}=\frac{1}{2}\sum_{i=1}^nq_iV_i \] Où $V_i$ est le potentiel en $i$ dû aux autres charges. \\\\
+\noindent Ce résultat se géneralise pour une distribution de charge par
+\[ U=\frac{1}{2}\int_{dist}dq(M)V(M) \textrm{ où }V(M)=\frac{1}{4\pi\varepsilon_0}\int_{dist}\frac{dq}{r} \]
+\emph{Remarque} : $V$ est exprimé en Volt (V) alors que $V$ est exprimé en électron-volt (eV). $1 $eV$=1.6\times 10^{-19}$ J.
+
+\subsection{Surfaces équipotentielles}
+
+\noindent\textbf{Définition} : La surface équipotentielle est telle que le potentiel $V$ est constant en tout point de celle-ci.
+\[V(x,y,z)=\textrm{cte}\Rightarrow dV=\vec{\textrm{grad }}V.\vec{dl}=0\Rightarrow\vec{E}.\vec{dl}=0\]

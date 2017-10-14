@@ -1,0 +1,42 @@
+\section{Interférences entre deux ondes}
+Dans cette partie, nous allons nous intéresser aux phenomènes d'interférence. C'est à dire étudier ce qui se passe lorsque deux ondes se "rencontrent" dans un cas géneral. Considérons donc le schémas suivant \\
+\quadri{10}
+Ici, deux ondes $\xi_1$ et $\xi_2$ sont émises de deux sources différentes telle que
+\[
+\xi_1=\xi_{01}e^{i(\vec{k}.\vec{r_1}-\omega t)} \textrm{ et }
+\xi_2=\xi_{02}e^{i(\vec{k}.\vec{r_2}-\omega t)}
+\]
+En un point $M$, un observateur reçoit une seule onde $\xi(M)$, somme des deux premières :
+\[ \xi(M,t)=\xi_1+\xi_2=(\xi_{01}e^{i\vec{k}.\vec{r_1}}+\xi_{02}e^{i\vec{k}.\vec{r_2}})e^{-i\omega t} \]
+\emph{Rappel} : Soit $z\in\mathbb(C)$, $\mid z\mid^2=zz^*$ où $z^*$ désigne le conjugué de $z$\\\\
+Calculons l'amplitude de l'onde $\xi$ : 
+\[ \mid\xi\mid^2=\mid\xi_1+\xi_2\mid=(\xi_1+\xi_2)(\xi_1+\xi_2)^*=\xi_{01}^2+\xi_{02}^2+2\xi_{01}\xi_{02}\cos(k(r_1-r_2)) \]
+On pose alors dans la suite de ce cours $\delta=k(r_1-r_2)$ la différence de phase. On a alors :
+\[ \mid\xi\mid=\sqrt{\xi_{01}+\xi_{02}+2\xi_{01}\xi_{02}\cos\delta} \]
+Deux cas sont alors à étudier :
+\begin{itemize}
+\item $\cos\delta=1\Leftrightarrow k(r_1-r_2)=2n\pi \Leftrightarrow \frac{2 \pi}{\lambda}(r_1-r_2)=2n\pi\Leftrightarrow r_1-r_2=n\lambda, n\in\mathbb{N}$ Dans ce cas, l'interférence est dite constructive car l'amplitude de l'onde est $\mid\xi\mid=\mid\xi_{01}+\xi_{02}\mid$
+\item $\cos\delta=-1\Leftrightarrow k(r_1-r_2)=(2n+1)\pi\Leftrightarrow\frac{2\pi}{\lambda}(r_1-r_2)=(2n+1)\pi\Leftrightarrow r_1-r_2=(n+\frac{1}{2})\lambda, n\in\mathbb{N}$ Dans ce cas, l'interférence est dite destructive car l'amplitude de l'onde est $\mid\xi\mid=\mid\xi_{01}-\xi_{02}\mid$
+\end{itemize}
+\emph{Remarque} : Dans le cas des ondes sonores, on trouve facilement que $\mid p\mid^2=A^2\left(\frac{1}{r_1^2}+\frac{1}{r_2^2}+\frac{2}{r_1r_2}\cos\delta\right)$
+
+\section{Diffraction}
+Le phénomène de diffraction trouve une explication dans le Principe de Huygens, énoncé comme suit :\\
+\textbf{Principe de Huygens} : Chaque point de la surface d'onde est une source secondaire de l'onde.\\\\
+Ceci explique parfaitement l'expérience d'Young bien connue.
+\quadri{10}
+\textbf{Expérience d'Young} : Une onde est émise par une source, elle se propage jusqu'à un plan où se trouvent deux ouvertures. Plus loin, un écran est placé. Sur celui-ci, on voit que l'onde présente une figure de diffraction.
+\quadri{15}
+La disposition du système est telle que $a<<D$ et donc $a<<r_1$, $a<<r_2$. On a alors $r_1\approx r_2$ et $\xi_{01}=\xi_{02}=\xi_0$. On peut calculer l'amplitude de l'onde en un point $M$ du plan :
+\[ \mid\xi\mid=\sqrt{2\xi_0^2+2\xi_0^2\cos\delta}=\xi_0\sqrt{2(1+\cos\delta)}=\xi_0\sqrt{2(2\cos^2\frac{\delta}{2})}=2\xi_0\cos\frac{\delta}{2} \]
+Comme $a<<D$, on peut considérer que $S_1M \parallel S_2M$, alors $S_2M=S'M$. Or, $S_1M=S_1S'+S'M=a\sin\theta+S'M$.\\
+De plus si $\theta<<1$ rad, alors $\sin\theta\approx\theta$. D'où, $S_1M=a\theta+S'M$ et donc $r_1-r_2=a\theta$.\\\\
+Enfin, par des considérations géométriques on a $\tan\theta=\frac{x}{D}\approx\theta$. D'où $r_1-r_2=\frac{ax}{D}$ et finalement
+\[ \delta=\frac{kax}{D}=\frac{2\pi ax}{D} \]
+On remarque par ailleurs que $\mid\xi\mid$ est maximal quand $\cos\frac{\delta}{2}$ est maximal.
+\[ \cos\frac{\delta}{2}=\cos n\pi\Leftrightarrow \frac{2\pi ax}{\lambda D}=2n\pi\Leftrightarrow x_n=\frac{n\lambda D}{a} \]
+De même on trouve la position des minimums :
+\[ x_n=(n+\frac{1}{2})\frac{\lambda D}{a} \]
+On définit enfin l'interfrange $i$ comme la distance entre deux franges, soit
+\[ i=x_{n+1}-x_n=\frac{\lambda D}{a} \]
+
